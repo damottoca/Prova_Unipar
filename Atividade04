@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class Atividade04 {
+
+    public static void main(String[] args) {
+
+        int taffe = 0;
+        int rodrigo = 0;
+        int lucas = 0;
+        int alessandro = 0;
+
+        Scanner sc = new Scanner(System.in);
+         System.out.print("Digite a quantidade de votos: ");
+         int quantidadeDeVotos = sc.nextInt();
+        double[] Votos = new double[quantidadeDeVotos];
+
+        for( int i = 0;i < quantidadeDeVotos; i ++ ){
+            double votos;
+
+            System.out.print("Digite a voto: ");
+            int voto = sc.nextInt();
+
+            if(voto == 99){
+                taffe++;
+            }
+         if(voto == 88){
+             rodrigo++;
+         }
+         if(voto == 77){
+             lucas++;
+         }
+         if(voto == 66){
+             alessandro++;
+         }
+        }
+
+        if(taffe > rodrigo && taffe > lucas && taffe > alessandro){
+            System.out.println("Tafffe ganhou - votos: " + taffe);
+        }
+
+        if(rodrigo > lucas && rodrigo > alessandro && rodrigo > taffe){
+            System.out.println("Rodrigo ganhou - votos: " + rodrigo);
+        }
+
+        if(lucas > alessandro && lucas > taffe && lucas > rodrigo){
+            System.out.println("Lucas ganhou - votos: " + lucas);
+        }
+
+        if(alessandro > taffe && alessandro > rodrigo && alessandro > lucas){
+            System.out.println("Alessandro ganhou - votos: " + alessandro);
+        }
+
+
+    }
+
+
+
+
+
+}
