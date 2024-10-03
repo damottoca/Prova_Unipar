@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a Quantidade de filmes que deseja avaliar");
+        int AvaliacoesFilmes = sc.nextInt();
+
+        int[] filmes = new int[AvaliacoesFilmes];
+        int AvaAcimaDaMedia = Integer.MAX_VALUE;
+        int AvaAbaixoDaMedia = Integer.MIN_VALUE;
+        int AvaAcimaDaMdia = 0;
+        int AvaAbaixoDaMdia = 0;
+
+        for (int i = 0; i < AvaliacoesFilmes; i++) {
+            System.out.println("Digite a nota da avaliação do filme" + (i + 1));
+            filmes[i] = sc.nextInt();
+
+            if (filmes[i] < AvaAcimaDaMedia) {
+                AvaAcimaDaMedia = filmes[i];
+            }
+            Scanner scanner = new Scanner(System.in);
+            if (filmes[i] > AvaAbaixoDaMdia) {
+                AvaAbaixoDaMdia = filmes[i];
+            }
+            if (AvaAcimaDaMedia >= 6) {
+                System.out.println(" Avaliação boa");
+                if (AvaAbaixoDaMdia < 6) {
+                    System.out.println(" Avaliação ruim");
+                }
+                System.out.println("Media boa:" + AvaAcimaDaMedia);
+                System.out.println("Media ruim:" + AvaAbaixoDaMdia);
+                System.out.println("Quantidade de avaliacoes: " + AvaAcimaDaMedia);
+                System.out.println("Quantidade de avaliacoes: " + AvaAbaixoDaMdia);
+            }
+            {
+
+            }
+        }
+    }
+
+    }
+
+
+
+
